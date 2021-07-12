@@ -1,18 +1,20 @@
+import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-
-const Stack = createStackNavigator()
+import { StyleSheet, View } from 'react-native';
+import Weather from './components/Weather';
+import Constants  from 'expo-constants';
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={ZipCodeScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  )
+    <View style={styles.container}>
+      <Weather zipCode="90110"/>
+      <StatusBar style="auto" />
+    </View>
+  );
 }
 
-
+const styles = StyleSheet.create({
+  container: {
+    paddingTop: Constants.statusBarHeight
+  },
+});

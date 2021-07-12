@@ -9,7 +9,7 @@ export default function Weather(props) {
         temp: 0,
     })
 
-    
+
     useEffect(() => {
         console.log(`fetching data with zipCode = ${props.zipCode}`)
         if (props.zipCode) {
@@ -32,7 +32,7 @@ export default function Weather(props) {
     return (
         <View>
             <ImageBackground source={require('../bg.jpg')} style={styles.backdrop}>
-                    <View style={styles.backdrop}>
+                    <View style={styles.back_g}>
                         <Text/>
                         <Text style={styles.text2}>Zip Code is {props.zipCode}</Text>
                         <Forecast {...forecastInfo} styles={styles}/>
@@ -50,6 +50,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         width: '100%',
         height: '100%'
+    },
+    back_g: {
+        alignItems: 'center',
+        backgroundColor: 'rgba(0,0,0,0.5)',
+        width: '100%',
+        height: '40%',
     },
     white: {
         color: 'white'
