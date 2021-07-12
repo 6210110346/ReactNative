@@ -8,6 +8,8 @@ export default function Weather(props) {
         description: '-',
         temp: 0,
     })
+
+    
     useEffect(() => {
         console.log(`fetching data with zipCode = ${props.zipCode}`)
         if (props.zipCode) {
