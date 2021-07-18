@@ -4,18 +4,24 @@ import { StyleSheet, Text, View } from 'react-native'
 export default function Forecast(props){
     return (
         <View style={styles.backdrop}>
-            <Text style={styles.text1}>{props.main}</Text>
-            <Text style={styles.text2}>{props.description}</Text>
-            <View style={{flexDirection :'row'}}>
-                <Text style={styles.text1}>{props.temp}</Text>
-                <Text style={styles.text2}>°c</Text>
+            <View style={{flexDirection :'row',alignItems : 'center'}}>
+                <Text style={styles.text2}>{props.main} : </Text>
+                <Text style={styles.text2}>{props.description}</Text>
             </View>
-            <Text style={styles.text2}>feels like</Text>
-            <View style={{flexDirection :'row'}}>
-                <Text style={styles.text1}>{props.feels_like}</Text>
-                <Text style={styles.text2}>°c</Text>
+            <View style={{flexDirection :'row',alignItems : 'center'}}>
+                <Text style={styles.text2}>Temp : </Text> 
+                <View style={{flexDirection :'row'}}>
+                    <Text style={styles.text1}>{props.temp}</Text>
+                    <Text style={styles.text2}>°c</Text>
+                </View>
             </View>
-            
+            <View style={{flexDirection :'row',alignItems : 'center'}}>
+                <Text style={styles.text2}>feels like : </Text>
+                <View style={{flexDirection :'row'}}>
+                    <Text style={styles.text1}>{props.feels_like}</Text>
+                    <Text style={styles.text2}>°c</Text>
+                </View>
+            </View>
         </View>
     )
 }
