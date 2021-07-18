@@ -10,6 +10,11 @@ export default function Forecast(props){
                 <Text style={styles.text1}>{props.temp}</Text>
                 <Text style={styles.text2}>°c</Text>
             </View>
+            <Text style={styles.text2}>feels like</Text>
+            <View style={{flexDirection :'row'}}>
+                <Text style={styles.text1}>{props.feels_like}</Text>
+                <Text style={styles.text2}>°c</Text>
+            </View>
             
         </View>
     )
