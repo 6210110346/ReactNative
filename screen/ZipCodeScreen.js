@@ -51,7 +51,8 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgba(0,0,0,0.6)',
         height: 60,
         padding: 20,
-        fontSize: 15,
+        fontSize: 20,
+        fontWeight: 'bold',
     },
     zipCode:{
         flex: 1,
@@ -59,7 +60,8 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgba(1,0,0,0.6)',
         height: 60,
         padding: 20,
-        fontSize: 15,
+        fontSize: 20,
+        fontWeight: 'bold',
     },
   })
   
